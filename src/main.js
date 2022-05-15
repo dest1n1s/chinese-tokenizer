@@ -1,4 +1,3 @@
-const {readFileSync} = require('fs')
 const Cedict = require('./cedict')
 
 const chinesePunctuation = [
@@ -6,10 +5,6 @@ const chinesePunctuation = [
     '、', '。', '《', '》', '『', '』', '【', '】',
     '！', '（', '）', '，', '：', '；', '？'
 ]
-
-exports.loadFile = function(path) {
-    return exports.load(readFileSync(path, 'utf-8'))
-}
 
 exports.load = function(contents) {
     let dictionary = new Cedict()
